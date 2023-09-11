@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: black; /* Set the background color to black */
+            color: white; /* Set text color to white */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            background-color: #222; /* Darker gray for the shopping cart background */
+            border-radius: 10px;
+        }
+
+        /* Rest of your shopping cart styles here */
+
+        .last {
+            width: 100vw !important;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar code you provided -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color: white; font-weight: bold; font-size: 30px;">Lenskam</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../homepage/scripts/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../login/login.html">Login/Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../cart/cart.html">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">For Business</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../download/app.html">Download</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../help/help.html">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shopping cart content -->
+    <header>
+        <h1>Shopping Cart</h1>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="product">
+                    <img src="../homepage/images/first.jpg" alt="Product 1" style="height: 15vh; width: 10vw;">
+                    <div class="product-details">
+                        <div class="product-title">Product 1</div>
+                        <div class="product-price">$49.99</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="product-actions">
+                    <div class="quantity">
+                        <input type="number" value="1">
+                    </div>
+                    <div class="remove-button">Remove</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="product">
+                    <img src="../homepage/images/first.jpg" alt="Product 2" style="height: 15vh; width: 10vw;">
+                    <div class="product-details">
+                        <div class="product-title">Product 2</div>
+                        <div class="product-price">$29.99</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="product-actions">
+                    <div class="quantity">
+                        <input type="number" value="1">
+                    </div>
+                    <div class="remove-button">Remove</div>
+                </div>
+            </div>
+        </div>
+        <div class="total">Total: $79.98</div>
+        <button class="checkout-button">Checkout</button>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 last">
+        <div class="container-fluid">
+            <p>&copy; 2023 Lenskam - Camera Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
