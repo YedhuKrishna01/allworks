@@ -6,16 +6,18 @@
     <title>Shopping Cart</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
-        body {
-            background-color: black; /* Set the background color to black */
-            color: white; /* Set text color to white */
+         html,body {
+            background-color: black;
+            color: white;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            position: relative;
+            overflow-x: hidden;
         }
-
         header {
-            background-color: #333;
+            background-color: #44444441;
             color: white;
             padding: 20px;
             text-align: center;
@@ -23,11 +25,82 @@
 
         .container {
             padding: 20px;
-            background-color: #222; /* Darker gray for the shopping cart background */
+            background-color: #44444441; 
             border-radius: 10px;
         }
 
-        /* Rest of your shopping cart styles here */
+        .product {
+            background-color:  #44444441;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .product-details {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .product-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 18px;
+        }
+
+        .product-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .quantity {
+            margin-bottom: 10px;
+        }
+
+        .quantity input {
+            width: 40px;
+            text-align: center;
+        }
+
+        .remove-button {
+            color: #ff3300;
+            cursor: pointer;
+        }
+
+        .remove-button:hover {
+            text-decoration: underline;
+        }
+
+        .total {
+            font-size: 24px;
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .checkout-button {
+            background-color: #4a2604;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .checkout-button:hover {
+            background-color: #cc5500;
+        }
 
         .last {
             width: 100vw !important;
@@ -38,49 +111,56 @@
     </style>
 </head>
 <body>
-    <!-- Navbar code you provided -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#" style="color: white; font-weight: bold; font-size: 30px;">Lenskam</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="../homepage/scripts/index.html">Home</a>
+                        <a class="nav-link" href="../homepage/script/index.html" style="color: white; font-size: 18px;">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../login/login.html">Login/Sign Up</a>
+                        <a class="nav-link" href="../../login/login.html" style="color: white; font-size: 18px;">Login/Sign Up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../cart/cart.html">Cart</a>
+                        <a class="nav-link" href="../../cart/cart.html" style="color: white; font-size: 18px;">Cart</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">For Business</a>
+                        <a class="nav-link" href="../business/business.html" style="color: white; font-size: 18px;">For Business</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../download/app.html">Download</a>
+                        <a class="nav-link" href="../../download/app.html" style="color: white; font-size: 18px;">Download</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../help/help.html">Help</a>
+                        <a class="nav-link" href="../../help/help.html" style="color: white; font-size: 18px;">Help</a>
                     </li>
-                </ul>
+                    </ul>
+                </div>
             </div>
-        </div>
     </nav>
-
-    <!-- Shopping cart content -->
     <header>
         <h1>Shopping Cart</h1>
     </header>
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-md-6">
                 <div class="product">
-                    <img src="../homepage/images/first.jpg" alt="Product 1" style="height: 15vh; width: 10vw;">
+                    <img src="../homepage/images/first.jpg" alt="Product 1" style="max-width: 100px; height: auto;">
                     <div class="product-details">
-                        <div class="product-title">Product 1</div>
+                        <div class="text fs-2">Sony NEX-7 Body With 18-55 mm Lens Mirrorless Camera</div>
+                        <div class="text1 fs-5">
+                            <h4 class="fs-3" style="margin-top: 1vh; color: red;">Features</h4>
+                            <ul style="margin-top: 2vh;">
+                                <li>Effective Pixels: 24.3 MP</li>
+                                <li>Sensor Type: CMOS | LCD Size: 3 inch</li>
+                                <li>Max Shutter Speed: 1/4000</li>
+                                <li>Auto Focus</li>
+                                <li>Various Flash Modes</li>
+                            </ul>
+                        </div>
                         <div class="product-price">$49.99</div>
                     </div>
                 </div>
@@ -94,13 +174,24 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <hr>
+        <div class="row mt-5">
             <div class="col-md-6">
                 <div class="product">
-                    <img src="../homepage/images/first.jpg" alt="Product 2" style="height: 15vh; width: 10vw;">
+                    <img src="../homepage/images/first.jpg" alt="Product 2" style="max-width: 100px; height: auto;">
                     <div class="product-details">
-                        <div class="product-title">Product 2</div>
-                        <div class="product-price">$29.99</div>
+                        <div class="text fs-2">Sony NEX-7 Body With 18-55 mm Lens Mirrorless Camera</div>
+                        <div class="text1 fs-5">
+                            <h4 class="fs-3" style="margin-top: 1vh; color: red;">Features</h4>
+                            <ul style="margin-top: 2vh;">
+                                <li>Effective Pixels: 24.3 MP</li>
+                                <li>Sensor Type: CMOS | LCD Size: 3 inch</li>
+                                <li>Max Shutter Speed: 1/4000</li>
+                                <li>Auto Focus</li>
+                                <li>Various Flash Modes</li>
+                            </ul>
+                        </div>
+                        <div class="product-price">$49.99</div>
                     </div>
                 </div>
             </div>
@@ -114,16 +205,14 @@
             </div>
         </div>
         <div class="total">Total: $79.98</div>
-        <button class="checkout-button">Checkout</button>
+        <a href="../payment/payment.html"><button class="checkout-button">Payment</button></a>
     </div>
-
     <footer class="bg-dark text-white text-center py-3 last">
         <div class="container-fluid">
             <p>&copy; 2023 Lenskam - Camera Store. All rights reserved.</p>
-        </div>
+         </div>
     </footer>
-
-    <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
+    
