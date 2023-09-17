@@ -7,21 +7,26 @@ body {
     align-items: center;
     justify-content: center;
     height: 90vh;
-    border: 5vh solid rgb(11, 4, 45);
+    background-color:black;
 }
 header{
     font-size: 50px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    padding-top: 5vh;
+    margin-top: 5vh;
+    background-color: white;
+    height: 35vh;
+    width: 70vw;
 }
 .clock {
     height: 8vh;
     width: 20vw;
-    margin-left: 2vw;
+    margin-left: 25vw;
+    margin-top: 5vh;
     padding-bottom: 3vh;
     border: 5px solid black;
     font-size: 70px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    color: #333;
 }
